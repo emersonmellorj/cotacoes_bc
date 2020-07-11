@@ -49,7 +49,7 @@ try:
         symbol = result[1]
         country = result[3]
 
-        print(f"\Menor cotação frente ao U$: {symbol}, {country}, {cot_dolar_compra}\n")
+        print(f"\nMenor cotação frente ao U$: {symbol}, {country}, {cot_dolar_compra}\n")
     
     else:
         print(f"\nFormato de data inválido, por favor digite a data no formato YYYYMMDD\n")
@@ -58,4 +58,4 @@ except UnicodeDecodeError as err:
     print("\nMelhor cotação: x\n")
 
 except Exception as err:
-    print("\nFalha na tentativa de consulta dos dados!\n")
+    print(f"\nFalha na tentativa de consulta dos dados {err}!\n")
