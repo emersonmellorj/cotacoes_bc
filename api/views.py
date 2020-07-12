@@ -16,6 +16,6 @@ def get_cotation(request, date_param):
     return JsonResponse(response)
 
 def get_cotations_data(request):
-    return HttpResponse('Este endpoint não está desenvolvido.')
+    return HttpResponse('Este endpoint não foi desenvolvido.')
 
     

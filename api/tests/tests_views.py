@@ -23,4 +23,4 @@ class GetCotationsDataTestCase(TestCase):
 
     def test_get_cotations(self):
         response = self.client.get('/')
-        self.assertEquals(b'Este endpoint n\xc3\xa3o est\xc3\xa1 desenvolvido.', response.content)
+        self.assertEquals(b'Este endpoint n\xc3\xa3o foi desenvolvido.', response.content)

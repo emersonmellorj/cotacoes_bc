@@ -16,12 +16,22 @@ Visto que esta aplicação desenvolvida será utilizada por outra aplicação no
 
 - Uma tabela de lookup, aonde o script acima irá pegar os dados de símbolo da moeda e nome do país no qual esta moeda pertence;
 
+- Foram criados dois modelos de dados, que neste primeiro momento não estão sendo utilizados. Eles servião quando for necessário armazenar os dados adquiridos. O primeiro modelo serve para armazenar a melhor cotação diária e o segundo modelo serve para armazenar todas as cotações obtidas de uma determinada data.
+
 ## Como utilizar este projeto:
 
-coverage run manage.py test
-coverage report
+Para executar o script via terminal, basta acessar a pasta do ambiente virtual e executar o comando abaixo:
+-python manage.py get_cotation
 
-python manage.py get_cotation
+Se quiser fazer uma requisição via Get na API, segue abaixo o endpoint criado:
 
-Endpoint: http://127.0.0.1:8000/api/v1/get_cotation/{data para pesquisa}
-Ex: http://127.0.0.1:8000/api/v1/get_cotation/20200706
+- Endpoint: http://127.0.0.1:8000/api/v1/get_cotation/{data para pesquisa}
+- Ex: http://127.0.0.1:8000/api/v1/get_cotation/20200706
+
+## Testes automáticos com o coverage:
+
+<img src='api/static/images/coverage_tests_api.png' />
+
+### Para executar os testes:
+- coverage run manage.py test
+- coverage report
