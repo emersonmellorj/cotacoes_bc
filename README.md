@@ -20,7 +20,9 @@ Visto que esta aplicação desenvolvida será utilizada por outra aplicação no
 
 ## Como utilizar este projeto:
 
-Para executar o script via terminal, basta acessar a pasta do ambiente virtual e executar o comando abaixo:
+Primeiramente, crie um ambiente virtual. Logo após, faça um clone deste projeto na pasta do ambiente virtual criado. Todas as bibliotecas necessárias para a utilização do projeto estão no arquivo requirements.txt
+
+Após isso, para executar o script via terminal, basta acessar a pasta do ambiente virtual e executar o comando abaixo:
 -python manage.py get_cotation
 
 Se quiser fazer uma requisição via Get na API, segue abaixo o endpoint criado:
@@ -35,3 +37,15 @@ Se quiser fazer uma requisição via Get na API, segue abaixo o endpoint criado:
 ### Para executar os testes:
 - coverage run manage.py test
 - coverage report
+
+## Acesso a API:
+
+Neste primeiro momento não vi necessidade de colocar acesso autenticado à API.
+
+## Base de dados para armazenamento dos dados:
+
+Visto que os modelos foram apenas criados, sem utilização neste momento, deixei o SQLite mesmo como padrão. Quando o projeto for para produção, minha sugestão seria integrar com o Postgres.
+
+## Servidor web que irá suportar a solução:
+
+Escolhi o Gunicorn para receber as requisições. O mesmo já está instalado mas não foi configurado devido ao projeto ainda estar na fase de desenvolvimento.
