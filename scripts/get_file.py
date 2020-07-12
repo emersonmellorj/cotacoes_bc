@@ -16,7 +16,7 @@ def get_best_cotation(file):
 
 
 def get_data_file(date_param):
-
+    """Aqui irei efetivamente realizar um get na URL para baixar o arquivo com os dados de cotações"""
     try:
         date_param = int(date_param)
         if isinstance(date_param, str):
@@ -35,7 +35,6 @@ def get_data_file(date_param):
                     file.write(f'{title}\n')
                     file.write(request_content)
                 best_cotation = get_best_cotation(dir_file)
-                # Separando os valores que iremos utilizar
                 coin = best_cotation.values[0][3]
                 cot_dolar_compra = best_cotation.values[0][6]
                 # Pegando o símbolo e país da moeda

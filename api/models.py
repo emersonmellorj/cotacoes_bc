@@ -25,4 +25,4 @@ class BetterCotation(models.Model):
     updated_date = models.DateTimeField(name="updated_date", auto_now=True)
 
     def __str__(self):
-        return self.name
+        return f'{self.name}'

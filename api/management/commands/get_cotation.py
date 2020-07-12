@@ -1,8 +1,5 @@
 from django.core.management.base import BaseCommand, CommandError
-
-from django.urls import reverse, reverse_lazy
 from django.conf import settings
-import datetime
 import requests
 from scripts.get_file import get_data_file
 
@@ -17,7 +14,6 @@ class Command(BaseCommand):
 
             if isinstance(date_param, int):
                 response = requests.get(f'http://localhost:8000/api/v1/get_cotation/{date_param}')
-
                 if b'dados nao encontrados' not in response.content:
                     symbol = response.json().get('symbol')
                     country = response.json().get('country')
@@ -40,5 +36,5 @@ class Command(BaseCommand):
 
         except Exception as err:
             self.stdout.write(self.style.ERROR(f"\nFalha na tentativa de consulta dos dados: {err}!\n"))
-            
-        self.stdout.write(self.style.SUCCESS('A melhor cotação frente ao dólar foi obtida com sucesso!'))
+
+        self.stdout.write(self.style.SUCCESS('A consulta foi realizada com sucesso!'))
